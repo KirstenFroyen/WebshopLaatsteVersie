@@ -1,0 +1,147 @@
+﻿body {
+    background: url('../../Images/background.png') fixed center;
+    background-image: url('../../Images/background.png');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.banner {
+    width: 160px;
+    height: 600px;
+    margin-left: 15px;
+    border: 1px solid #888;
+    box-shadow: 0px 2px 5px #ccc;
+    color:#28a745;
+}
+
+.container {
+    margin-top:-600px;
+}
+
+.panel-heading {
+    font-size: 26px;
+    padding-bottom: 10px;
+    color:#15681f;
+    transition:1s;
+}
+
+.panel-heading:hover{
+    font-weight:bold;
+    font-size:24px;
+}
+
+
+
+/*stackoverflow gebruikt bij het draaien van een afbeelding*/
+
+.image:hover {
+   
+    width: 150px;
+    height: 150px;
+    -webkit-animation: spin 4s linear normal;
+    -moz-animation: spin 4s linear normal;
+    animation: spin 4s linear normal;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+.link:hover{
+    text-decoration:none;
+
+}
+
+
+
+/*Moving letters*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+*, *:before, *:after{
+  box-sizing:border-box;
+}
+body{
+  font-family: 'Lato', sans-serif;
+    
+}
+div.foo{
+  width: 90%;
+  margin: 0 auto;
+  text-align:left;
+}
+.letter{
+  display: inline-block;
+  font-weight: 100;
+  font-size: 26px;
+  font-style:italic;
+  margin: 0.2em;
+  position: relative;
+  color: #2cb12f;
+  transform-style: preserve-3d;
+  perspective: 400px;
+  z-index: 1;
+}
+.letter:before, .letter:after{
+  position:absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top:0;
+  left:0;
+}
+.letter, .letter:before, .letter:after{
+  transition: all 0.3s ease-in-out;
+}
+.letter:before{
+  color: #fff;
+  text-shadow: 
+    -1px 0px 1px rgba(255,255,255,.8),
+    1px 0px 1px rgba(0,0,0,.8);
+  z-index: 3;
+  transform:
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg);
+}
+.letter:after{
+  color: rgba(0,0,0,.11);
+  z-index:2;
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg)
+    skew(0deg,1deg);
+}
+.letter:hover:before{
+  color: #fafafa;
+  transform:
+    rotateX(0deg)
+    rotateY(-25deg)
+    rotateZ(0deg);
+}
+.letter:hover:after{
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(25deg)
+    rotateZ(0deg)
+    skew(0deg,22deg);
+}
+
